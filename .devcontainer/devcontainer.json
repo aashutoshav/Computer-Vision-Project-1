@@ -11,6 +11,7 @@
 	// Set *default* container specific settings.json values on container create.
 	"settings": {
 		"python.pythonPath": "/home/vscode/.conda/bin/python",
+		"python.defaultInterpreterPath": "/home/vscode/.conda/bin/python",
 	},
 
 	// Add the IDs of extensions you want installed when the container is created.
@@ -26,7 +27,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "uname -a",
+	"postCreateCommand": "pip install -e .",
 
 	// Uncomment to use Docker from inside the container. See https://aka.ms/vscode-remote/samples/docker-from-docker.
 	// "mounts": [ "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind" ],
