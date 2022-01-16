@@ -2,6 +2,7 @@ name: cv_proj1
 channels:
   - conda-forge
   - pytorch
+  - python=3.6
 dependencies:
   - bandit
   - flake8
