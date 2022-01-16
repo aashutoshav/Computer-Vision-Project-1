@@ -28,10 +28,15 @@
 
 ## Submission format
 
-This is very important as you will lose 5 points for every time you do not follow the instructions. From your repository, do the following:
+This is very important as you will lose 5 points for every time you do not follow the instructions. You will submit two items to Gradescope:
 
-- Click Code > Download ZIP.
-- Rename the file as `<your_gt_username>.zip`
+1. <your_gt_username>.zip containing:
+  - src/: directory containing all your code for this assignment
+  - cutoff_frequency.txt: .txt file containing the best cutoff frequency values you found for each pair of images in data/
+  - setup.cfg: setup file for environment, do not need to change this file
+  - additional_data/: (optional) if you use any data other than the images we provide, please include them here
+  - README.txt - (optional) if you implement any new functions other than the ones we define in the skeleton code (e.g., any extra credit implementations), please describe what you did and how we can run the code. We will not award any extra credit if we can’t run your code and verify the results.
+2. <your_gt_usernamme>_proj1.pdf - your report
 
 ## Important Notes
 
