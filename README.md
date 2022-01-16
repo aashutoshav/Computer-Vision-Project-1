@@ -35,7 +35,7 @@ This is very important as you will lose 5 points for every time you do not follo
 
 ## Important Notes
 
-- Please follow the environment setup in [Project 0](https://github.gatech.edu/cs4476/project-0). Please note, there is a separate `.devcontainer` within this repository (we'll supply one for each assignment).
+- Please follow the environment setup in [Project 0](https://github.gatech.edu/cs4476/project-0).
 - Do **not** use absolute paths in your code or your code will break.
 - Use relative paths like the starter code already does.
 - Failure to follow any of these instructions will lead to point deductions. Create the zip file and hand it in with your report PDF through Gradescope (please remember to mark which parts of your report correspond to each part of the rubric).
