@@ -2,7 +2,6 @@ name: cv_proj1
 channels:
   - conda-forge
   - pytorch
-  - python=3.6
 dependencies:
   - bandit
   - flake8
@@ -11,6 +10,7 @@ dependencies:
   - mypy
   - numpy
   - pytest
+  - python>=3.6
   - pyyaml
   - pytorch-cpu
   - torchvision-cpu=0.2
