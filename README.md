@@ -1,4 +1,4 @@
-# CS-4476/6476 Project 1: Convolution and Hybrid Images
+# CS-4476 Project 1: Convolution and Hybrid Images
 
 ## Getting Started
 
@@ -8,7 +8,7 @@
 ## Logistics
 
 - Submit via [Gradescope](https://gradescope.com).
-- Part 4 of this project is **required** for 6476, and **optional** for 4476.
+- Part 4 of this project is **optional**.
 - Additional information can be found in `docs/project-1.pdf`.
 
 ## 4476 Rubric
@@ -25,26 +25,6 @@
 - +5 pts: `low_pass()` in `part2_models.py`
 - +10 pts: `forward()` in `part2_models.py`
 - +5 pts: `my_conv2d_pytorch()` in `part3.py`
-- +20 pts: Report
-- -5*n pts: Lose 5 points for every time you do not follow the instructions for the hand-in format
-
-
-## 6476 Rubric
-
-- +4 pts: `create_Gaussian_kernel_1D()` in `part1.py`
-- +4 pts: `create_Gaussian_kernel_2D()` in `part1.py`
-- +15 pts: `my_conv2d_numpy()` in `part1.py`
-- +10 pts: `create_hybrid_image()` in `part1.py`
-- +4 pts: `make_dataset()` in `part2_datasets.py`
-- +4 pts: `get_cutoff_frequencies()` in `part2_datasets.py`
-- +3 pts: `__len__()` in `part2_datasets.py`
-- +3 pts: `__getitem__()` in `part2_datasets.py`
-- +4 pts: `get_kernel()` in `part2_models.py`
-- +4 pts: `low_pass()` in `part2_models.py`
-- +10 pts: `forward()` in `part2_models.py`
-- +5 pts: `my_conv2d_pytorch()` in `part3.py`
-- +5 pts: `my_cond2d_freq()` in `part4.py`
-- +5 pts: `my_deconv2d_freq()` in `part4.py`
 - +20 pts: Report
 - -5*n pts: Lose 5 points for every time you do not follow the instructions for the hand-in format
 
