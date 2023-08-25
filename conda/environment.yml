@@ -14,4 +14,4 @@ dependencies:
   - pyyaml
   - pytorch
   - torchvision
-  - Pillow=6.2.1
+  - Pillow
