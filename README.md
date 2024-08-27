@@ -5,11 +5,11 @@
 - See [Project 0](https://github.gatech.edu/cs4476/project-0) for detailed environment setup. This project's environment is set up similarly, and will create a conda environment called `cv_proj1`.
 - Ensure that you are using the environment `cv_proj1`, which you can install using the install script `conda/install.sh`. (Recommended)
 - Alternative way to set up the environment: make sure you are in your Project1/conda folder and then use this command: ```mamba env create -f environment.yml``` (Recommended)
-- If both methods above don't work well, you can try to create the environment by using pip install:
+- If both methods above don't work well, you can try to create the environment by using conda and pip install:
   1. make sure you are in the Project1/conda folder.
   2. ```conda create -n cv_proj1 python=3.10.0```
-  3. ```pip install -r requirements.txt```
-  4. ```conda activate cv_proj1```
+  3. ```conda activate cv_proj1```
+  4. ```pip install -r requirements.txt```
   5. go back to your Project1 folder, ```pip install -e .```
 
 ## Logistics
