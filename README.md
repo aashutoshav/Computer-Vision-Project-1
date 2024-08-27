@@ -9,7 +9,8 @@
   1. make sure you are in the Project1/conda folder.
   2. ```conda create -n cv_proj1 python=3.10.0```
   3. ```pip install -r requirements.txt```
-  4. go back to your Project1 folder, ```pip install -e .```
+  4. ```conda activate cv_proj1```
+  5. go back to your Project1 folder, ```pip install -e .```
 
 ## Logistics
 
