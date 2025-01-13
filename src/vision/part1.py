@@ -26,9 +26,15 @@ def create_Gaussian_kernel_1D(ksize: int, sigma: int) -> np.ndarray:
     - The goal is to discretize a 1d continuous distribution onto a vector.
     """
 
+    ############################
+    ### TODO: YOUR CODE HERE ###
+
     raise NotImplementedError(
         "`create_Gaussian_kernel_1D` function in `part1.py` needs to be implemented"
     )
+    
+    ### END OF STUDENT CODE ####
+    ############################
 
     return kernel
 
