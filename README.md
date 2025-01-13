@@ -8,7 +8,7 @@
 - Alternative way to set up the environment (Recommended):
   1. make sure you are in your Project1/conda folder, then enter those commands in the terminal.
   2. ```mamba env create -f environment.yml```
-  3. ```conda activate cv_proj1```
+  3. ```mamba activate cv_proj1```
   4. go back to your Project1 folder, ```pip install -e .```
 - If both methods above don't work well, you can try to create the environment by using conda and pip install:
   1. make sure you are in the Project1/conda folder, then enter those commands in the terminal.
