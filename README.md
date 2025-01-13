@@ -1,4 +1,4 @@
-# CS-4476 Project 1: Convolution and Hybrid Images
+# CS-6476 Project 1: Convolution and Hybrid Images
 
 ## Getting Started
 
@@ -20,26 +20,45 @@
 ## Logistics
 
 - Submit via [Gradescope](https://gradescope.com).
-- Part 4 of this project is **optional**.
+// - Part 4 of this project is **optional**.
+- Part 4 of this project is **required** for 6476
 - Additional information can be found in `docs/project-1.pdf`.
 
-## 4476 Rubric
+//## 4476 Rubric
 
-- +5 pts: `create_Gaussian_kernel_1D()` in `part1.py`
-- +5 pts: `create_Gaussian_kernel_2D()` in `part1.py`
+//- +5 pts: `create_Gaussian_kernel_1D()` in `part1.py`
+//- +5 pts: `create_Gaussian_kernel_2D()` in `part1.py`
+//- +15 pts: `my_conv2d_numpy()` in `part1.py`
+//- +10 pts: `create_hybrid_image()` in `part1.py`
+//- +5 pts: `make_dataset()` in `part2_datasets.py`
+//- +5 pts: `get_cutoff_frequencies()` in `part2_datasets.py`
+//- +5 pts: `__len__()` in `part2_datasets.py`
+//- +5 pts: `__getitem__()` in `part2_datasets.py`
+//- +5 pts: `get_kernel()` in `part2_models.py`
+//- +5 pts: `low_pass()` in `part2_models.py`
+//- +10 pts: `forward()` in `part2_models.py`
+//- +5 pts: `my_conv2d_pytorch()` in `part3.py`
+//- +20 pts: Report
+//- -5*n pts: Lose 5 points for every time you do not follow the instructions for the hand-in format
+
+## 6476 Rubric
+
+- +4 pts: `create_Gaussian_kernel_1D()` in `part1.py`
+- +4 pts: `create_Gaussian_kernel_2D()` in `part1.py`
 - +15 pts: `my_conv2d_numpy()` in `part1.py`
 - +10 pts: `create_hybrid_image()` in `part1.py`
-- +5 pts: `make_dataset()` in `part2_datasets.py`
-- +5 pts: `get_cutoff_frequencies()` in `part2_datasets.py`
-- +5 pts: `__len__()` in `part2_datasets.py`
-- +5 pts: `__getitem__()` in `part2_datasets.py`
-- +5 pts: `get_kernel()` in `part2_models.py`
-- +5 pts: `low_pass()` in `part2_models.py`
+- +4 pts: `make_dataset()` in `part2_datasets.py`
+- +4 pts: `get_cutoff_frequencies()` in `part2_datasets.py`
+- +3 pts: `__len__()` in `part2_datasets.py`
+- +3 pts: `__getitem__()` in `part2_datasets.py`
+- +4 pts: `get_kernel()` in `part2_models.py`
+- +4 pts: `low_pass()` in `part2_models.py`
 - +10 pts: `forward()` in `part2_models.py`
 - +5 pts: `my_conv2d_pytorch()` in `part3.py`
+- +5 pts: `my_cond2d_freq()` in `part4.py`
+- +5 pts: `my_deconv2d_freq()` in `part4.py`
 - +20 pts: Report
 - -5*n pts: Lose 5 points for every time you do not follow the instructions for the hand-in format
-
 
 ## Submission format
 
@@ -62,7 +81,6 @@ This is very important as you will lose 5 points for every time you do not follo
 - Failure to follow any of these instructions will lead to point deductions. Create the zip file by clicking and hand it in with your report PDF through Gradescope (please remember to mark which parts of your report correspond to each part of the rubric).
 
 ## Project Structure
-
 ```console
 .
 ├── README.md
@@ -95,6 +113,7 @@ This is very important as you will lose 5 points for every time you do not follo
 │       ├── part2_datasets.py
 │       ├── part2_models.py
 │       ├── part3.py
+│       ├── part4.py
 │       └── utils.py
 └── tests
     ├── __init__.py
