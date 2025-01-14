@@ -43,7 +43,7 @@
 -->
 
 ## 6476 Rubric
-
+<!--
 - +4 pts: `create_Gaussian_kernel_1D()` in `part1.py`
 - +4 pts: `create_Gaussian_kernel_2D()` in `part1.py`
 - +15 pts: `my_conv2d_numpy()` in `part1.py`
@@ -58,7 +58,9 @@
 - +5 pts: `my_conv2d_pytorch()` in `part3.py`
 - +5 pts: `my_cond2d_freq()` in `part4.py`
 - +5 pts: `my_deconv2d_freq()` in `part4.py`
-- +20 pts: Report
+-->
+- +70 pts: Code (The autograder will give a mark breakdown once it runs your code)
+- +30 pts: Report
 - -5*n pts: Lose 5 points for every time you do not follow the instructions for the hand-in format
 
 ## Submission format
