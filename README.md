@@ -20,9 +20,6 @@
 ## Logistics
 
 - Submit via [Gradescope](https://gradescope.com).
-<!--
-- Part 4 of this project is **optional**.
--->
 - Part 4 of this project is **required** for 6476
 - Additional information can be found in `docs/project-1.pdf`.
 
