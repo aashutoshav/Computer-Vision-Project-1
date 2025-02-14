@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-- See [Project 0](https://github.gatech.edu/cs4476/project-0) for detailed environment setup. This project's environment is set up similarly, and will create a conda environment called `cv_proj1`.
+- See Project 0 for detailed environment setup. This project's environment is set up similarly, and will create a conda environment called `cv_proj1`.
 - Ensure that you are using the environment `cv_proj1`, which you can install using the install script `conda/install.sh`. 
  (Recommended)
 - Alternative way to set up the environment (Recommended):
