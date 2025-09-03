@@ -36,9 +36,10 @@ def make_dataset(path: str) -> Tuple[List[str], List[str]]:
     ############################
     ### TODO: YOUR CODE HERE ###
 
-    raise NotImplementedError(
-        "`make_dataset` function in `part2_datasets.py` needs to be implemented"
-    )
+    import glob
+    all_paths = sorted(glob.glob(os.path.join(path, '*.bmp')))
+    images_a = [p for p in all_paths if 'a_' in os.path.basename(p)]
+    images_b = [p for p in all_paths if 'b_' in os.path.basename(p)]
 
     ### END OF STUDENT CODE ####
     ############################
@@ -64,10 +65,8 @@ def get_cutoff_frequencies(path: str) -> List[int]:
     ############################
     ### TODO: YOUR CODE HERE ###
 
-    raise NotImplementedError(
-        "`get_cutoff_frequencies` function in "
-        + "`part2_datasets.py` needs to be implemented"
-    )
+    with open(path, 'r') as f:
+        cutoff_frequencies = [int(line.strip()) for line in f.readlines()]
 
     ### END OF STUDENT CODE ####
     ############################
@@ -100,9 +99,7 @@ class HybridImageDataset(data.Dataset):
         ############################
         ### TODO: YOUR CODE HERE ###
 
-        raise NotImplementedError(
-            "`self.transform` function in `part2_datasets.py` needs to be implemented"
-        )
+        self.transform = transforms.ToTensor()
 
         ### END OF STUDENT CODE ####
         ############################
@@ -117,9 +114,7 @@ class HybridImageDataset(data.Dataset):
         ############################
         ### TODO: YOUR CODE HERE ###
 
-        raise NotImplementedError(
-            "`__len__` function in `part2_datasets.py` needs to be implemented"
-        )
+        return len(self.images_a)
 
         ### END OF STUDENT CODE ####
         ############################
@@ -151,9 +146,15 @@ class HybridImageDataset(data.Dataset):
         ############################
         ### TODO: YOUR CODE HERE ###
 
-        raise NotImplementedError(
-            "`__getitem__ function in `part2_datasets.py` needs to be implemented"
-        )
+        img_a_pth = self.images_a[idx]
+        img_b_pth = self.images_b[idx]
+        cutoff_frequency = self.cutoff_frequencies[idx]
+        
+        img_a_pil = PIL.Image.open(img_a_pth)
+        img_b_pil = PIL.Image.open(img_b_pth)
+        
+        image_a = self.transform(img_a_pil)
+        image_b = self.transform(img_b_pil)
 
         ### END OF STUDENT CODE ####
         ############################

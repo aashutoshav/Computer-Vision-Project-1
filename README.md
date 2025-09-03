@@ -20,7 +20,7 @@
 ## Logistics
 
 - Submit via [Gradescope](https://gradescope.com).
-- Part 4 of this project is **required** for 6476
+- Part 4 of this project is **extra credit** for 6476
 - Additional information can be found in `docs/project-1.pdf`.
 
 <!--
@@ -59,8 +59,10 @@
 - +5 pts: `my_cond2d_freq()` in `part4.py`
 - +5 pts: `my_deconv2d_freq()` in `part4.py`
 -->
-- +70 pts: Code (The autograder will give a mark breakdown once it runs your code)
-- +30 pts: Report
+- +50 pts: Code (The autograder will give a mark breakdown once it runs your code)
+- +5 pts: Code (Part 4 as extra credit)
+- +50 pts: Report
+- +5 pts: Report (Part 4 as extra credit)
 - -5*n pts: Lose 5 points for every time you do not follow the instructions for the hand-in format
 
 ## Submission format

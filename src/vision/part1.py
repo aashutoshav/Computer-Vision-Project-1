@@ -28,10 +28,14 @@ def create_Gaussian_kernel_1D(ksize: int, sigma: int) -> np.ndarray:
 
     ############################
     ### TODO: YOUR CODE HERE ###
-
-    raise NotImplementedError(
-        "`create_Gaussian_kernel_1D` function in `part1.py` needs to be implemented"
-    )
+    
+    x = np.arange(ksize)
+    mu = ksize // 2
+    
+    kernel = 1 / (sigma * np.sqrt(2 * np.pi)) * np.exp(-0.5 * ((x - mu) / sigma) ** 2)
+    kernel = kernel / np.sum(kernel) 
+    
+    kernel = kernel.reshape(ksize, 1)
     
     ### END OF STUDENT CODE ####
     ############################
@@ -69,9 +73,11 @@ def create_Gaussian_kernel_2D(cutoff_frequency: int) -> np.ndarray:
     ############################
     ### TODO: YOUR CODE HERE ###
 
-    raise NotImplementedError(
-        "`create_Gaussian_kernel_2D` function in `part1.py` needs to be implemented"
-    )
+    ksize = cutoff_frequency * 4 + 1
+    sigma = cutoff_frequency
+    
+    kernel_1d = create_Gaussian_kernel_1D(ksize, sigma)
+    kernel = np.dot(kernel_1d, kernel_1d.T)
 
     ### END OF STUDENT CODE ####
     ############################
@@ -112,9 +118,21 @@ def my_conv2d_numpy(image: np.ndarray, filter: np.ndarray) -> np.ndarray:
     ############################
     ### TODO: YOUR CODE HERE ###
 
-    raise NotImplementedError(
-        "`my_conv2d_numpy` function in `part1.py` needs to be implemented"
-    )
+    img_h, img_w, img_c = image.shape
+    filter_h, filter_w = filter.shape
+    
+    pad_h = filter_h // 2
+    pad_w = filter_w // 2
+    
+    filtered_image = np.zeros_like(image)
+    
+    padded_img = np.pad(image, ((pad_h, pad_h), (pad_w, pad_w), (0, 0)), mode='constant')
+    
+    for c in range(img_c):
+      for y in range(img_h):
+        for x in range(img_w):
+          image_patch = padded_img[y:y+filter_h, x:x+filter_w, c]
+          filtered_image[y, x, c] = np.sum(image_patch * filter)
 
     ### END OF STUDENT CODE ####
     ############################
@@ -160,9 +178,12 @@ def create_hybrid_image(
     ############################
     ### TODO: YOUR CODE HERE ###
 
-    raise NotImplementedError(
-        "`create_hybrid_image` function in `part1.py` needs to be implemented"
-    )
+    low_frequencies = my_conv2d_numpy(image1, filter)
+    low_pass_img2 = my_conv2d_numpy(image2, filter)
+    high_frequencies = image2 - low_pass_img2
+    
+    hybrid_image = low_frequencies + high_frequencies
+    hybrid_image = np.clip(hybrid_image, 0, 1)
 
     ### END OF STUDENT CODE ####
     ############################

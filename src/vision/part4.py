@@ -12,7 +12,6 @@ def my_conv2d_freq(image: np.ndarray, filter: np.ndarray) -> np.ndarray:
     - the filter represented in the frequency domain,
     - the result of the convolution in the frequency domain, and 
     - the result of the convolution in the spatial domain.
-
     We will plot and analyze these to gain a better understanding of what is going on.
 
     Args:
@@ -34,9 +33,24 @@ def my_conv2d_freq(image: np.ndarray, filter: np.ndarray) -> np.ndarray:
     ############################
     ### TODO: YOUR CODE HERE ###
 
-    raise NotImplementedError(
-        "`my_conv2d_freq` function in `part4.py` needs to be implemented"
-    )
+    img_h, img_w = image.shape
+    filter_h, filter_w = filter.shape
+    
+    padded_filter = np.zeros_like(image, dtype=np.float64)
+    
+    pad_h_start = (img_h - filter_h) // 2
+    pad_w_start = (img_w - filter_w) // 2
+    
+    padded_filter[pad_h_start:pad_h_start + filter_h, pad_w_start:pad_w_start + filter_w] = filter
+    shifted_filter = np.fft.ifftshift(padded_filter)
+    
+    image_freq = np.fft.fft2(image)
+    filter_freq = np.fft.fft2(shifted_filter)
+    
+    conv_result_freq = image_freq * filter_freq
+    conv_result_complex = np.fft.ifft2(conv_result_freq)
+    
+    conv_result = np.real(conv_result_complex)
 
     ### END OF STUDENT CODE ####
     ############################
@@ -74,10 +88,25 @@ def my_deconv2d_freq(image: np.ndarray, filter: np.ndarray) -> np.ndarray:
 
     ############################
     ### TODO: YOUR CODE HERE ###
-
-    raise NotImplementedError(
-        "`my_deconv2d_freq` function in `part4.py` needs to be implemented"
-    )
+    
+    img_h, img_w = image.shape
+    filter_h, filter_w = filter.shape
+    epsilon = 1e-10
+    
+    padded_filter = np.zeros_like(image, dtype=np.float64)
+    pad_h_start = (img_h - filter_h) // 2
+    pad_w_start = (img_w - filter_w) // 2
+    
+    padded_filter[pad_h_start:pad_h_start + filter_h, pad_w_start:pad_w_start + filter_w] = filter
+    shifted_filter = np.fft.ifftshift(padded_filter)
+    
+    image_freq = np.fft.fft2(image)
+    filter_freq = np.fft.fft2(shifted_filter)
+    
+    deconv_result_freq = image_freq / (filter_freq + epsilon)
+    deconv_result_complex = np.fft.ifft2(deconv_result_freq)
+    
+    deconv_result = np.real(deconv_result_complex)
 
     ### END OF STUDENT CODE ####
     ############################
